@@ -4,7 +4,7 @@
 
 // Phase 5 me yahan backend ka URL daalenge.
 // Abhi khali hai = DEMO MODE (sample products chalenge)
-const API_URL = "";
+const API_URL = "https://olly-api.sayulakshay.workers.dev/";
 
 const DEMO_PRODUCTS = [
   { id: 1, name: "Olly Classic T-Shirt", price: 499, emoji: "👕" },
