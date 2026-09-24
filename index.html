@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olly — Shop Everything Nice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">🛍️ Olly</div>
+    <button class="cart-btn" id="cartBtn">
+      🛒 Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Olly 👋</h1>
+    <p>Simple shopping, honest prices.</p>
+  </section>
+
+  <main>
+    <h2 class="section-title">Products</h2>
+    <div class="product-grid" id="productGrid"></div>
+  </main>
+
+  <!-- Cart Panel -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-head">
+      <h3>Your Cart</h3>
+      <button class="close-btn" id="closeCart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="total-row">
+        <span>Total</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn">Place Order</button>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal">
+      <h3>Delivery Details</h3>
+      <form id="checkoutForm">
+        <input type="text" id="custName" placeholder="Your name" required />
+        <input type="tel" id="custPhone" placeholder="Phone number" required />
+        <textarea id="custAddress" placeholder="Full address" rows="3" required></textarea>
+        <button type="submit" class="submit-btn">Confirm Order</button>
+        <button type="button" class="cancel-btn" id="cancelCheckout">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal success">
+      <div class="success-emoji">🎉</div>
+      <h3>Order Placed!</h3>
+      <p id="successMsg">Thank you for shopping with Olly.</p>
+      <button class="submit-btn" id="successClose">Continue Shopping</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
